@@ -2,9 +2,9 @@
 1、封装了年月日，年月，文字的日期选择器，也可以自定义其他选择器，使用简单，直接导入2行代码搞定
 2、使用详情：
 1、在需要使用的.h中导入需要使用的文件，并申明属性和代理
-#import "LXKColorChoice.h"
-#import "LXKDatePickerView.h"
-#import "LXKDatePickerForYMDView.h"
+import "LXKColorChoice.h"
+import "LXKDatePickerView.h"
+import "LXKDatePickerForYMDView.h"
 @interface ViewController ()<LXKColorChoiceDelegate,LXKDatePickerViewDelegate,LXKDatePickerForYMDViewDelegate>
 @property(nonatomic,strong)LXKDatePickerForYMDView *yearAndMonthAndDayDatePickerView;
 @property(nonatomic,strong)LXKDatePickerView *yearAndMonthDatePickerView;
@@ -35,17 +35,17 @@
     }
 }
 3、实现代理方法
-#pragma mark == 年月日代理方法
+pragma mark == 年月日代理方法
 -(void)getdatepickerForYearMonthDayChangeValues:(NSString *)dayStr
 {
     self.selectedResultLabel.text = dayStr;
 }
-#pragma mark == 年月代理方法
+pragma mark == 年月代理方法
 -(void)getdatepickerForYearAndMonthChangeValues:(NSString *)values
 {
     self.selectedResultLabel.text = values;
 }
-#pragma mark == 颜色代理方法
+pragma mark == 颜色代理方法
 -(void)getColorChoiceValues:(NSString *)values
 {
     self.selectedResultLabel.text = values;
