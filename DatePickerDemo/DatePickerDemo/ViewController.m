@@ -66,12 +66,12 @@
             self.yearAndMonthAndDayDatePickerView.delegate = self;
             break;
         case 1:
-            //年月日
+            //年月
             self.yearAndMonthDatePickerView = [LXKDatePickerView makeViewWithMaskDatePicker:self.view.frame setTitle:@"年月选择"];
             self.yearAndMonthDatePickerView.delegate = self;
             break;
         case 2:
-            //年月日
+            //颜色选择
             self.colorDatePickerView = [LXKColorChoice makeViewWithMaskDatePicker:self.view.frame setTitle:@"颜色选择" Arr:self.colorArr];
             self.colorDatePickerView.delegate = self;
             break;
@@ -80,12 +80,9 @@
     }
 }
 #pragma mark == 年月日代理方法
--(void)getdatepickerForYearMonthDayChangeValues:(NSDate *)date
+-(void)getdatepickerForYearMonthDayChangeValues:(NSString *)dayStr
 {
-    //设置日期样式
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
-    self.selectedResultLabel.text = [dateFormatter stringFromDate:date];
+    self.selectedResultLabel.text = dayStr;
 }
 #pragma mark == 年月代理方法
 -(void)getdatepickerForYearAndMonthChangeValues:(NSString *)values

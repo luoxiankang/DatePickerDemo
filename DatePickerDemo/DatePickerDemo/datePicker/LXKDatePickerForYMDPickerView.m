@@ -89,7 +89,10 @@
         if (!self.getData) {
             self.getData = [NSDate date];//获取当前时间，日期
         }
-        [_delegate getdatepickerForYearMonthDayChangeValues:self.getData];
+        //设置日期样式
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+        [_delegate getdatepickerForYearMonthDayChangeValues:[dateFormatter stringFromDate:self.getData]];
     }
     [self removeView];
 }

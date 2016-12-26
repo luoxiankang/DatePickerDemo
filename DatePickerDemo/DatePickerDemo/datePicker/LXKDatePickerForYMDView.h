@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol LXKDatePickerForYMDViewDelegate<NSObject>
--(void)getdatepickerForYearMonthDayChangeValues:(NSDate *)date;//获取日期改变的代理方法
+-(void)getdatepickerForYearMonthDayChangeValues:(NSString *)dayStr;//获取日期改变的代理方法
 @end
 
 @interface LXKDatePickerForYMDView : UIView<UIGestureRecognizerDelegate>
