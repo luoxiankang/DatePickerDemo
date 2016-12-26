@@ -1,15 +1,15 @@
 # DatePickerDemo
-1、封装了年月日，年月，文字的日期选择器，也可以自定义其他选择器，使用简单，直接导入2行代码搞定
-2、使用详情：                                  
-1、在需要使用的.h中导入需要使用的文件，并申明属性和代理                              
-import "LXKColorChoice.h"                                     
-import "LXKDatePickerView.h"                                           
-import "LXKDatePickerForYMDView.h"                                              
-@interface ViewController ()<LXKColorChoiceDelegate,LXKDatePickerViewDelegate,LXKDatePickerForYMDViewDelegate>
-@property(nonatomic,strong)LXKDatePickerForYMDView *yearAndMonthAndDayDatePickerView;
-@property(nonatomic,strong)LXKDatePickerView *yearAndMonthDatePickerView;
-@property(nonatomic,strong)LXKColorChoice *colorDatePickerView;
-@property(nonatomic,strong)NSArray *colorArr;//文字选择器的数据源
+1、封装了年月日，年月，文字的日期选择器，也可以自定义其他选择器，使用简单，直接导入2行代码搞定\n
+2、使用详情：\n                                  
+1、在需要使用的.h中导入需要使用的文件，并申明属性和代理 \n                             
+import "LXKColorChoice.h"   \n                                  
+import "LXKDatePickerView.h"  \n                                         
+import "LXKDatePickerForYMDView.h"      \n                                        
+@interface ViewController ()<LXKColorChoiceDelegate,LXKDatePickerViewDelegate,LXKDatePickerForYMDViewDelegate>\n
+@property(nonatomic,strong)LXKDatePickerForYMDView *yearAndMonthAndDayDatePickerView;\n
+@property(nonatomic,strong)LXKDatePickerView *yearAndMonthDatePickerView;\n
+@property(nonatomic,strong)LXKColorChoice *colorDatePickerView;\n
+@property(nonatomic,strong)NSArray *colorArr;//文字选择器的数据源\n
 2，加方法实例化对象和设置代理
 -(void)cliclDatePickerBtn:(UIButton *)btn
 {
